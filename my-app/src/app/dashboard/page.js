@@ -1,5 +1,6 @@
 'use client'
 import styles from './Dashboard.module.css'
+import Link from 'next/link'
 
 export default function Dashboard() {
     return (
@@ -10,25 +11,25 @@ export default function Dashboard() {
                 <div className={styles.dashboardCard}>
                     <h2>Book Appointment</h2>
                     <p>Schedule a new appointment with a doctor</p>
-                    <a href="/appointments/book" className={styles.cardButton}>Book Now</a>
+                    <Link href="/appointments/book" className={styles.cardButton}>Book Now</Link>
                 </div>
 
                 <div className={styles.dashboardCard}>
                     <h2>Appointment History</h2>
                     <p>View your past and upcoming appointments</p>
-                    <a href="/appointments/history" className={styles.cardButton}>View History</a>
+                    <Link href="/appointments/history" className={styles.cardButton}>View History</Link>
                 </div>
 
                 <div className={styles.dashboardCard}>
                     <h2>Check-In</h2>
                     <p>Check-in for your upcoming appointment</p>
-                    <a href="/checkin/123" className={styles.cardButton}>Check-In</a>
+                    <Link href="/checkin/123" className={styles.cardButton}>Check-In</Link>
                 </div>
 
                 <div className={styles.dashboardCard}>
                     <h2>Notifications</h2>
                     <p>View your appointment reminders and updates</p>
-                    <a href="/notifications" className={styles.cardButton}>View Notifications</a>
+                    <Link href="/notifications" className={styles.cardButton}>View Notifications</Link>
                 </div>
             </div>
         </div>

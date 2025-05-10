@@ -17,7 +17,7 @@ export default function Reschedule() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        // In a real app, fetch the appointment details
+        // Simulated fetch logic (replace with real fetch)
         setAppointment({
             id: appointmentId,
             type: 'General Checkup',
@@ -68,10 +68,7 @@ export default function Reschedule() {
             </div>
 
             <form className={styles.appointmentForm} onSubmit={handleSubmit}>
-                <input
-                    type="hidden"
-                    value={form.id}
-                />
+                <input type="hidden" value={form.id} />
 
                 <div className={styles.formRow}>
                     <div className={styles.formGroup}>
