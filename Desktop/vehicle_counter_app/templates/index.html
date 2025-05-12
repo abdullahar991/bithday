@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Counting Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vehicle Tracking Dashboard</h1>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <div class="file-upload-wrapper">
+                        <input type="file" name="video" id="videoFile" accept="video/*" required class="file-input" onchange="updateFileName(this)">
+                        <label for="videoFile" class="file-input-label">
+                            <span class="file-input-icon">📁</span>
+                            <span class="file-input-text">Choose Video File</span>
+                        </label>
+                        <span id="file-name" class="file-name">No file selected</span>
+                        <button type="submit" class="upload-btn">Upload Video</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="dashboard">
+                <div class="vehicle-counts" id="vehicleCounts">
+                    <p class="loading-text">Loading vehicle counts...</p>
+                </div>
+
+                <div class="video-container" id="video-container">
+                    <p id="loading-message" class="loading-text">Processing video, please wait...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
